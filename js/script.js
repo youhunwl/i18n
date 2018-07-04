@@ -1,5 +1,5 @@
 var dict = {};
-
+var systemLang = navigator.language.toLowerCase().slice(0,2);
 $(function () {
   registerWords();
   switch(getCookieVal("lang")) {
