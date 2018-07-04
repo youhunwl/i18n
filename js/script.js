@@ -2,12 +2,15 @@ var dict = {};
 
 $(function () {
   registerWords();
-  if(getCookieVal("lang")=="en"){
-    setLanguage("en");
-  }else if(getCookieVal("lang")=="zh"){
-    setLanguage("zh");
-  }else{
-    setLanguage("en");
+  switch(getCookieVal("lang")) {
+    case "en" :
+      setLanguage("en");
+      break
+    case "zh" :
+      setLanguage("zh");
+      break
+    default:
+      setLanguage(systemLang);
   }
   
 // 切换语言事件
